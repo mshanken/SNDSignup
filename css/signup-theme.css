@@ -6,6 +6,7 @@ h3 span { color: #9e0039; }
 /*.row-two hr { border-top:2px solid #7B2E00;  }*/
 .row-four strong { font-size: 16px; }
 .row-four { line-height: normal; }
+.row-two img {max-width: 50%; }
 .btn{ background-color:#0072BB; color: #ffffff; padding: 2px 20px; margin:10px 0 20px; font-style: 16px; border-radius:1px; }
 .btn:hover, .btn:focus{ color:#cecece;}
 .btnbig{ background-color:#0072BB; font-size: 20px; padding: 10px 45px; margin: 0; }
