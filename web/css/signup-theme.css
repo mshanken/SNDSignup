@@ -16,7 +16,7 @@ hr{ margin-top: 1px; }
 #CI_email-error, #CI_custom1-error, #CI_custom2-error{ color:#a94442; }
 .addmarginbottom{ margin-bottom: 50px; }
 @media (min-width: 768px) {
-	h3, .row-one label { font-size: 1405; }
+	h3, .row-one label { font-size: 140%; }
 }
 @media (min-width: 992px) {
 	.lead h1{ font-size: 50px; }
