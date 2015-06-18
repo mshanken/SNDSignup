@@ -27,5 +27,9 @@ $(function () {
 			});
 		}
 	});
+	console.log(window.location.search);
+	var url = window.location.search;
+	var country = url.substring(url.indexOf('email=')+6, url.length);
 
+	$("#CI_email").val(country);
 });
