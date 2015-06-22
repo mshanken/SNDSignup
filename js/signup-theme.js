@@ -1,12 +1,17 @@
 $(function () {
 	$("#CI_subscribeForm").validate({
 		rules: {
-				CI_email:{email:true}
+			CI_email:{email:true},
+			CI_custom7: {
+		        required: function(element) {
+		          	return $("#othersel").is(":selected");
+		        }
+		    }
 		},
 		validClass: "success",
 		errorClass: "error",
 		errorElement:"em",
-		submitHandler: function() { form.submit(); },
+		submitHandler: function( form ) { form.submit(); },
 		success: function(label, element){
 			// console.log( "test2: ", label, element );
 			var _this = $(element).parent();
@@ -32,4 +37,12 @@ $(function () {
 	var country = url.substring(url.indexOf('email=')+6, url.length);
 
 	$("#CI_email").val(country);
+	$("#CI_custom2").change( function(){
+		// console.log($(this).val());
+		if( $(this).val() === "Other" ){
+			$(".form-group.hide").removeClass("hide");
+		} else {
+			$('#CI_custom7').parent().addClass("hide")
+		}
+	} )
 });

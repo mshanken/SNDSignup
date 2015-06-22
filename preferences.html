@@ -42,8 +42,7 @@
                 <div class="row row-one">
                     <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div><!-- empaty column -->
                     <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-                        <p>Welcome Shanken News Daily subscriber!<br />
-                            Please update your information below:</p><br />
+                        <p>We hope you're enjoying your subscription to Shanken News Daily.<br />Please check the information below and many any necessary changes.</p><br />
                         <div class="form-group">
                             <label class="control-label" for="CI_email">Email</label>
                             <input type="email" name="CI_email" class="form-control required" id="CI_email" placeholder="Email" maxlength="150" />
@@ -74,8 +73,14 @@
                                 <option value="Duty Free Operator">Duty Free Operator</option>
                                 <option value="Finance">Finance</option>
                                 <option value="Media/PR">Media/PR</option>
-                                <option value="Other">Other</option>
+                                <option value="Other" id="othersel">Other</option>
                             </select>
+                        </div><!-- /.form-group -->
+                        <div class="form-group hide">
+                            <label class="control-label" for="CI_custom1">Other</label>
+                            <input type="text" name="CI_custom7" id="CI_custom7" class="form-control" placeholder="Other" maxlength="12" />
+                            <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+                            <span id="inputError2Status" class="sr-only">(error)</span>
                         </div><!-- /.form-group -->
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div>
