@@ -35,9 +35,9 @@ $(function () {
 	// console.log(window.location.search);
 	var url = window.location.search;
 	var tmp = url.substring(url.indexOf('email=')+6, url.length);
-	console.log(url.indexOf('email='));
+	// console.log(url.indexOf('email='));
 	if ( url.indexOf('email=') !== -1 ){
-		console.log(1);
+		// console.log(1);
 		$("#CI_email").val(tmp);
 		$("#CI_custom2").change( function(){
 			// console.log($(this).val());
