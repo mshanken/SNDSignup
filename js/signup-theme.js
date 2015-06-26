@@ -33,19 +33,23 @@ $(function () {
 		}
 	});
 	// console.log(window.location.search);
-	var url = window.location.search;
-	var tmp = url.substring(url.indexOf('email=')+6, url.length);
-	// console.log(url.indexOf('email='));
-	if ( url.indexOf('email=') !== -1 ){
-		// console.log(1);
-		$("#CI_email").val(tmp);
-		$("#CI_custom2").change( function(){
-			// console.log($(this).val());
-			if( $(this).val() === "Other" ){
-				$(".form-group.hide").removeClass("hide");
-			} else {
-				$('#CI_custom7').parent().addClass("hide")
-			}
-		} )
+	var workWithThisFormIfExist = $("form[method='get']").length;
+	if(workWithThisFormIfExist){
+		var url = window.location.search,
+			tmp = url.substring(url.indexOf('email=')+6, url.length);
+		// console.log(url.indexOf('email='));
+		if ( url.indexOf('email=') !== -1 ){
+			// console.log(1);
+			$("#CI_email").val(tmp);
+			$("#CI_custom2").change( function(){
+				// console.log($(this).val());
+				if( $(this).val() === "Other" ){
+					$(".form-group.hide").removeClass("hide");
+				} else {
+					$('#CI_custom7').parent().addClass("hide")
+				}
+			} )
+		}
 	}
+		
 });
