@@ -33,7 +33,10 @@ $(function () {
 		}
 	});
 	// console.log(window.location.search);
-	var workWithThisFormIfExist = $("form[method='get']").length;
+	var workWithThisFormIfExist = $("form[method='get']").length,
+		workWithThisFormIfExist2 = $("form[method='post']").length;
+
+	// Populates email field from link
 	if(workWithThisFormIfExist){
 		var url = window.location.search,
 			tmp = url.substring(url.indexOf('email=')+6, url.length);
@@ -49,6 +52,17 @@ $(function () {
 					$('#CI_custom7').parent().addClass("hide")
 				}
 			} )
+		}
+	}
+	
+	// Tracking link source
+	if(workWithThisFormIfExist2){
+		var url = window.location.search,
+			tmp = url.substring(url.indexOf('source=')+7, url.length);
+		// console.log(url.indexOf('email='));
+		if ( url.indexOf('source=') !== -1 ){
+			// console.log(1);
+			$("#CI_custom5").val(tmp);
 		}
 	}
 		
