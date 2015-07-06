@@ -64,6 +64,14 @@ $(function () {
 			// console.log(1);
 			$("#CI_custom5").val(tmp);
 		}
+		$("#CI_custom2").change( function(){
+			// console.log($(this).val());
+			if( $(this).val() === "Other" ){
+				$(".form-group.hide").removeClass("hide");
+			} else {
+				$('#CI_custom7').parent().addClass("hide")
+			}
+		} )
 	}
 		
 });
