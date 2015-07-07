@@ -33,45 +33,35 @@ $(function () {
 		}
 	});
 	// console.log(window.location.search);
-	var workWithThisFormIfExist = $("form[method='get']").length,
-		workWithThisFormIfExist2 = $("form[method='post']").length;
+	var workWithThisFormIfExist = $("#CI_subscribeForm.update").length;
 
-	// Populates email field from link
+	// Pre-populates input fields via link
 	if(workWithThisFormIfExist){
-		var url = window.location.search,
-			tmp = url.substring(url.indexOf('email=')+6, url.length);
-		// console.log(url.indexOf('email='));
-		if ( url.indexOf('email=') !== -1 ){
-			// console.log(1);
-			$("#CI_email").val(tmp);
-			$("#CI_custom2").change( function(){
-				// console.log($(this).val());
-				if( $(this).val() === "Other" ){
-					$(".form-group.hide").removeClass("hide");
-				} else {
-					$('#CI_custom7').parent().addClass("hide")
-				}
-			} )
+		var url = window.location.search.split('&'),
+			tmp;
+			
+		for(var i = 0; i < url.length; i++){
+		   tmp = url[i].split('=');
+		   // console.log(tmp[1]);
+		   if ( tmp[0] === "email" || tmp[0] === "?email"){
+				$("#CI_email").val(tmp[1]);
+			}
+			if ( tmp[0] === "zipcode" || tmp[0] === "?zipcode" ){
+				$("#CI_custom1").val(tmp[1]);
+			}
+			if ( tmp[0] === "source" || tmp[0] === "?source" ){
+				$("#CI_custom5").val(tmp[1]);
+			}
 		}
 	}
 	
-	// Tracking link source
-	if(workWithThisFormIfExist2){
-		var url = window.location.search,
-			tmp = url.substring(url.indexOf('source=')+7, url.length);
-		// console.log(url.indexOf('email='));
-		if ( url.indexOf('source=') !== -1 ){
-			// console.log(1);
-			$("#CI_custom5").val(tmp);
+	// Adds an input field when other (type of industry select field) is selected
+	$("#CI_custom2").change( function(){
+		// console.log($(this).val());
+		if( $(this).val() === "Other" ){
+			$(".form-group.hide").removeClass("hide");
+		} else {
+			$('#CI_custom7').parent().addClass("hide")
 		}
-		$("#CI_custom2").change( function(){
-			// console.log($(this).val());
-			if( $(this).val() === "Other" ){
-				$(".form-group.hide").removeClass("hide");
-			} else {
-				$('#CI_custom7').parent().addClass("hide")
-			}
-		} )
-	}
-		
+	} )
 });
