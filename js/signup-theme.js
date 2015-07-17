@@ -33,7 +33,7 @@ $(function () {
 		}
 	});
 	// console.log(window.location.search);
-	var workWithThisFormIfExist = $("#CI_subscribeForm.update").length;
+	var workWithThisFormIfExist = $("#CI_subscribeForm.forfillingout").length;
 
 	// Pre-populates input fields via link
 	if(workWithThisFormIfExist){
