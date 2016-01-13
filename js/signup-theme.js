@@ -11,7 +11,18 @@ $(function () {
 		validClass: "success",
 		errorClass: "error",
 		errorElement:"em",
-		submitHandler: function( form ) { form.submit(); /*console.log($("#CI_custom7").val())*/ },
+		submitHandler: function( form ) {
+            var tmp = $("#CI_custom2").val();
+            if( tmp !== 'Finance' && tmp !== 'Media/PR' && tmp !== 'Other' ){
+                form.submit();
+                // console.log("submit to:", tmp);
+            } else {
+                $(form).attr('action','http://www.winespectator.com/sitesearch');
+                form.submit();
+                // window.location = 'http://www.winespectator.com/sitesearch?query='+tmp;
+                // console.log('redirecting because:',tmp);
+            }
+        },
 		success: function(label, element){
 			// console.log( "test2: ", label, element );
 			var _this = $(element).parent();
