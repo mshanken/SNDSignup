@@ -27,7 +27,7 @@ $(function () {
                     bustype = 2;
                 }
                 cachingfields = '&em='+$("#CI_email").val()+'&zip='+$("#CI_custom1").val()+'&comp='+$("#CI_custom11").val()+'&bus=14116'+bustype;
-                $(form).attr('action','https://msh.sub-forms.com/dragon/init.do?site=MSH12_QXnew&version=0&page=1&demo2627210'+cachingfields);
+                $(form).attr('action','https://msh.sub-forms.com/MSH12_QXnew?site=MSH12_QXnew&version=0&page=1&demo2627210'+cachingfields);
                 form.submit();
                 // window.location = 'http://www.winespectator.com/sitesearch?query='+tmp;
                 // console.log('redirecting because:',tmp);
