@@ -11,7 +11,29 @@ $(function () {
 		validClass: "success",
 		errorClass: "error",
 		errorElement:"em",
-		submitHandler: function( form ) { form.submit(); /*console.log($("#CI_custom7").val())*/ },
+		submitHandler: function( form ) {
+            var tmp = $("#CI_custom2").val(),
+                cachingfields,
+                bustype;
+            if( tmp !== 'Finance' && tmp !== 'Media/PR' && tmp !== 'Other' ){
+                form.submit();
+                // console.log("submit to:", tmp);
+            } else {
+                if(tmp === 'Finance'){
+                    bustype = 0;
+                } else if (tmp === 'Media/PR') {
+                    bustype = 1;
+                } else {
+                    bustype = 2;
+                }
+                cachingfields = '&em='+$("#CI_email").val()+'&zip='+$("#CI_custom1").val()+'&comp='+$("#CI_custom11").val()+'&bus=14116'+bustype;
+                // $(form).attr('action','https://msh.sub-forms.com/MSH12_QXnew?site=MSH12_QXnew&version=0&page=1&demo2627210'+cachingfields);
+                $(form).attr('action','https://www.sub-forms.com/MSH12_QXnew'+cachingfields);
+                form.submit();
+                // window.location = 'http://www.winespectator.com/sitesearch?query='+tmp;
+                // console.log('redirecting because:',tmp);
+            }
+        },
 		success: function(label, element){
 			// console.log( "test2: ", label, element );
 			var _this = $(element).parent();
