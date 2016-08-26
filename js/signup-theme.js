@@ -1,12 +1,23 @@
 $(function () {
 	$("#CI_subscribeForm").validate({
+		ignore: '.ignore',
 		rules: {
 			CI_email:{email:true},
 			CI_custom7: {
 		        required: function(element) {
 		          	return $("#othersel").is(":selected");
 		        }
-		    }
+		    },
+		    hiddenRecaptcha: {
+                required: function () {
+                    $('.g-recaptcha').removeClass('hidden');
+                    if (grecaptcha.getResponse() == '') {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                }
+            }
 		},
 		validClass: "success",
 		errorClass: "error",
@@ -29,7 +40,7 @@ $(function () {
                 cachingfields = '&em='+$("#CI_email").val()+'&zip='+$("#CI_custom1").val()+'&comp='+$("#CI_custom11").val()+'&bus=14116'+bustype;
                 // $(form).attr('action','https://msh.sub-forms.com/MSH12_QXnew?site=MSH12_QXnew&version=0&page=1&demo2627210'+cachingfields);
                 $(form).attr('action','https://www.sub-forms.com/MSH12_QXnew'+cachingfields);
-                form.submit();
+                alert('send!');
                 // window.location = 'http://www.winespectator.com/sitesearch?query='+tmp;
                 // console.log('redirecting because:',tmp);
             }
