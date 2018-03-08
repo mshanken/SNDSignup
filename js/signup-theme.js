@@ -7,17 +7,7 @@ $(function () {
 		        required: function(element) {
 		          	return $("#othersel").is(":selected");
 		        }
-		    },
-		    hiddenRecaptcha: {
-                required: function () {
-                    $('.g-recaptcha').removeClass('hidden');
-                    if (grecaptcha.getResponse() == '') {
-                        return true;
-                    } else {
-                        return false;
-                    }
-                }
-            }
+		    }
 		},
 		validClass: "success",
 		errorClass: "error",
