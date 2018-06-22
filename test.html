@@ -29,7 +29,7 @@
 
           ga('create', 'UA-23484466-1', 'shankennewsdaily.com');
           ga('require', 'linkid', 'linkid.js');
-          ga('send', {"hitType":"pageview","page":"/criticalimpact/update/form","title":"Critical impact update form","dimension1":"criticalimpact"});
+          ga('send', {"hitType":"pageview","page":"/criticalimpact/optin/form","title":"Critical impact optin form","dimension1":"criticalimpact"});
 
         </script>
         <!-- End UA code -->
@@ -42,23 +42,24 @@
                     <h1>Shanken News Daily<br /><span>An e-Newsletter from the Wine, Spirits and Beer experts</span><br /></h1>
                     <!-- <img src="images/SND_SubPage15-head.jpg" class="img-responsive center-block addmarginbottom" /> -->
                 </div>
-            </div><!-- /.row -->
+            </div><!-- /.row (previously: //newsletters.mshanken.com/wc/wc.cfm) -->
             <form action="https://portal.mshanken.com/wc/wc_verify.cfm" name="CI_subscribeForm" id="CI_subscribeForm" class="forfillingout" method="post">
-                <input type="hidden" name="CI_thankyou" value="//newsletters.shankennewsdaily.com/thankyou2.html">
-                <input type="hidden" name="CI_thankyou2" value="//newsletters.shankennewsdaily.com/thankyou2.html">
+                <!-- <input type="hidden" name="CI_triggeredid" value="583554427">
+                <input type="hidden" name="CI_thankyou" value="//newsletters.shankennewsdaily.com/thankyou.html">
+                <input type="hidden" name="CI_thankyou2" value="//newsletters.shankennewsdaily.com/thankyou.html">
                 <input type="hidden" name="CI_err" value="//newsletters.mshanken.com/wc/error.cfm">
                 <input type="hidden" name="CI_Action" value="sub">
                 <input type="hidden" name="CI_LID" value="2562333007">
-                <!-- <input type="hidden" name="CI_MID" value="146485141"> -->
+                <input type="hidden" name="CI_MID" value="146485141">
+                <input type="hidden" name="CI_FID" value="841f705f99be027f"> -->
+
                 <input type="hidden" name="CI_FID" value="2a4836fff1499622">
                 <input type="hidden" name="CI_MID" value="146485141">
-
                 <input type=hidden name="CI_custom5" id="CI_custom5" value="">
 
                 <div class="row row-one">
                     <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div><!-- empaty column -->
                     <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-                        <p>We hope you're enjoying your subscription to Shanken News Daily.<br />Please check the information below and make any necessary changes.</p><br />
                         <div class="form-group">
                             <label class="control-label" for="CI_email">Email</label>
                             <input type="email" name="CI_email" class="form-control required" id="CI_email" placeholder="Email" maxlength="150" />
@@ -74,6 +75,12 @@
                         <div class="form-group">
                             <label class="control-label" for="CI_custom11">Company Name</label>
                             <input type="text" name="CI_custom11" class="form-control required" id="CI_custom11" placeholder="Company Name" />
+                            <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+                            <span id="inputError2Status" class="sr-only">(error)</span>
+                        </div><!-- /.form-group -->
+                        <div class="form-group">
+                            <label class="control-label" for="CI_custom4">Title</label>
+                            <input type="text" name="CI_custom4" class="form-control required" id="CI_custom4" placeholder="Company Name" />
                             <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
                             <span id="inputError2Status" class="sr-only">(error)</span>
                         </div><!-- /.form-group -->
@@ -99,12 +106,7 @@
                                 <option value="Other" id="othersel">Other</option>
                             </select>
                         </div><!-- /.form-group -->
-                        <div class="form-group hide">
-                            <label class="control-label" for="CI_custom7"><span class="small">Don’t see your industry? Please describe it below.</span></label>
-                            <input type="text" name="CI_custom7" id="CI_custom7" class="form-control" placeholder="Add industry type" />
-                            <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
-                            <span id="inputError2Status" class="sr-only">(error)</span>
-                        </div><!-- /.form-group -->
+                        
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div>
                 </div><!-- /.row -->
@@ -124,6 +126,15 @@
                         <hr />
                         <p class="text-center"><input id="CI_submit" name="CI_submit" type="submit" value="Submit" class="btn btnbig" disabled></p>
                         <p class="text-center">By clicking Submit, I agree to receive occasional emails from<br />M. Shanken Communications, Inc.</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div><!-- empaty column -->
+                </div><!-- /.row -->
+
+                <div class="row row-two">
+                    <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div><!-- empaty column -->
+                    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                        <hr />
+                        <p class="text-center"><a href="images/SNDsamplepages.pdf"  target="_blank"><img src="images/SND_SubPage15-phone.jpg" class="img-responsive center-block" /></a></p>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div><!-- empaty column -->
                 </div><!-- /.row -->
