@@ -79,8 +79,25 @@
                             <span id="inputError2Status" class="sr-only">(error)</span>
                         </div><!-- /.form-group -->
                         <div class="form-group">
-                            <label class="control-label" for="CI_custom4">Title</label>
-                            <input type="text" name="CI_custom4" class="form-control required" id="CI_custom4" placeholder="Company Name" />
+                            <label for="Industry">Title</label>
+                            <select name="CI_custom4" id="CI_custom4" class="ci_procenter_text_box ci_procenter_dropdown form-control"  size="1" required >
+                                <option selected value="">Please Select One</option>
+                                <option value=">Owner,CEO,COO">Owner,CEO,COO</option>
+                                <option value="SVP, VP, GM">SVP, VP, GM</option>
+                                <option value="F&B Director/Manager">F&B Director/Manager</option>
+                                <option value="Store Manager">Store Manager</option>
+                                <option value="Bartender/Mixologist">Bartender/Mixologist</option>
+                                <option value="Brand Ambassador">Brand Ambassador</option>
+                                <option value="Sales Executive">Sales Executive</option>
+                                <option value="Catering Director/Manage">Catering Director/Manage</option>
+                                <option value="Purchasing Agent/Buyer">Purchasing Agent/Buyer</option>
+                                <option value="Chef">Chef</option>
+                                <option value="Other" id="othertsel">Other</option>
+                            </select>
+                        </div><!-- /.form-group -->
+                        <div class="form-group hide">
+                            <label class="control-label" for="CI_custom26"><span class="small">Don’t see your title? Please describe it below.</span></label>
+                            <input type="text" name="CI_custom26" id="CI_custom26" class="form-control" placeholder="Add title" />
                             <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
                             <span id="inputError2Status" class="sr-only">(error)</span>
                         </div><!-- /.form-group -->
