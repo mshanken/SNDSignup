@@ -8,6 +8,11 @@ $(function () {
 		          	return $("#othersel").is(":selected");
 		        }
 		    },
+		    CI_custom26: {
+		        required: function(element) {
+		          	return $("#othertsel").is(":selected");
+		        }
+		    },
             CI_proactive_agree_to_receive_emails: {
             	required: function(element) {
             		return $("#CI_custom25").is(":checked");
@@ -85,11 +90,20 @@ $(function () {
 
 	// Adds an input field when other (type of industry select field) is selected
 	$("#CI_custom2").change( function(){
-		// console.log($(this).val());
+		console.log($(this));
 		if( $(this).val() === "Other" ){
-			$(".form-group.hide").removeClass("hide");
+			$('#CI_custom7').parent().removeClass("hide");
 		} else {
 			$('#CI_custom7').parent().addClass("hide");
+		}
+	} );
+
+	$("#CI_custom4").change( function(){
+		console.log($(this));
+		if( $(this).val() === "Other" ){
+			$('#CI_custom26').parent().removeClass("hide");
+		} else {
+			$('#CI_custom26').parent().addClass("hide");
 		}
 	} );
 
