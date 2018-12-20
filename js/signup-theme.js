@@ -92,7 +92,7 @@ $(function () {
 
 	// Adds an input field when other (type of industry select field) is selected
 	$("#CI_custom2").change( function(){
-		console.log($(this));
+		// console.log($(this));
 		if( $(this).val() === "Other" ){
 			$('#CI_custom7').parent().removeClass("hide");
 		} else {
@@ -101,7 +101,7 @@ $(function () {
 	} );
 
 	$("#CI_custom4").change( function(){
-		console.log($(this));
+		// console.log($(this));
 		if( $(this).val() === "Other" ){
 			$('#CI_custom26').parent().removeClass("hide");
 		} else {
