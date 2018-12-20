@@ -1,3 +1,22 @@
+
+
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+
+    <script>
+        var l_submit_confirmation_status = true;
+        var l_recaptcha_status = false;
+        function ciEnableSubmitButton(code) {
+            if(code != '') {
+                l_recaptcha_status = true;
+                if (l_submit_confirmation_status && l_recaptcha_status) {
+                    document.getElementById('CI_submit').removeAttribute('disabled');
+                }
+            }
+        }
+    </script>
+
+
+
     <SCRIPT language="Javascript"> 
     <!-- 
     
@@ -131,12 +150,12 @@
         var message = "";
         
         //if (!isValidEmail_CI(document.CI_subscribeForm.elements[''EmailAddress''].value)) {
-    //	document.CI_subscribeForm.elements[''EmailAddress''].style.backgroundColor="yellow";
-    //		//alert("Please enter a valid Email Address. (yourname@domain.com)");
-    //		message = "Please enter a valid Email Address. (yourname@domain.com)\n\r" ;
-    //		document.CI_subscribeForm.elements[''EmailAddress''].focus();
-    //		
-    //	}
+    //  document.CI_subscribeForm.elements[''EmailAddress''].style.backgroundColor="yellow";
+    //      //alert("Please enter a valid Email Address. (yourname@domain.com)");
+    //      message = "Please enter a valid Email Address. (yourname@domain.com)\n\r" ;
+    //      document.CI_subscribeForm.elements[''EmailAddress''].focus();
+    //      
+    //  }
         
         for(var i=0; i<rfnames.length; i++) { 
             if (document.CI_subscribeForm.elements[rfnames[i]].value == "") {
@@ -181,9 +200,9 @@
                 
             }
         }
-		
-		/* check submit code: show only if the checkbox is added*/
-		
+        
+        /* check submit code: show only if the checkbox is added*/
+        
         /*end check submit code */
 
     
@@ -191,129 +210,132 @@
             alert(message);
             return false;
         }
-		else
-		{
-			document.CI_subscribeForm.submit();
-		}
+        else
+        {
+            document.CI_subscribeForm.submit();
+        }
     
     }
     
 
-	
-	
-	
-	//Submit confirmation code: show only if defined
-	
-	
-	
-	
-	
-	/* Find user language*/
-	var userLang = (navigator.language) ? navigator.language : navigator.userLanguage;
-	userLang = userLang.substr(0,2);
-	userLang = userLang.toUpperCase();
-		
-	/* Set the submit confirmation text to the appropriate language */
-	function checkLanguageSetting(){
-		var confirmation_text_language = "";
-		var default_confirmation_text = "I agree that the above information is correct";
-		var submitConfirmHTML = form_label_language = list_label_language ='';
-		var default_btn_text = "Subscribe!";
-		
-		console.log(userLang);
-		
-	
-	
-	
-	
-		/* Check for designated languages */
-		if(userLang == 'FR'){
-			confirmation_text_language = "";
-			form_label_language = "Vous pouvez vous abonner à notre liste d\'envoi en remplissant le formulaire ci-dessous et cliquez sur \"Abonnez-vous\" bouton.";
-			list_label_language = "S\'il vous plaît sélectionner vos listes d\'intérêt";
-			btn_text_language = "Abonnez-vous";
-		} else if(userLang == 'DU'){
-			confirmation_text_language = "";
-			form_label_language = "Sie können auf unsere Mailingliste, indem Sie das folgende Formular aus und klicken Sie auf die Schaltfläche \"Abonnieren\" abonnieren.";
-			list_label_language = "Bitte wahlen Sie Ihre Listen von Interesse";
-			btn_text_language = "Abonnieren";
-		} else if(userLang == 'ES'){
-			confirmation_text_language = "";
-			form_label_language = "Usted puede suscribirse a nuestra lista de correo rellenando el siguiente formulario y haga clic en el botón \"Suscribirse\".";
-			list_label_language = "Por favor, seleccione las listas de interés";
-			btn_text_language = "Suscribirse";
-		} else if(userLang == 'IT'){
-			confirmation_text_language = "";	
-			form_label_language = "È possibile iscriversi alla nostra mailing list compilando il modulo qui sotto e cliccando sul tasto \"Iscriviti\".";	
-			list_label_language = "Si prega di selezionare le vostre liste di interesse";
-			btn_text_language = "Iscriviti";
-		
-		} else { /* English */
-			confirmation_text_language = "";
-			form_label_language = "";
-			list_label_language = "";
-			btn_text_language = "Submit";
-		}
-	
-	
-		/*Use the browser's inbuilt HTML escape functionality to handle many of the characters*/
-	  	var l_html_div = document.createElement("div");
-	  	l_html_div.innerText = l_html_div.textContent = confirmation_text_language;
-	  	confirmation_text_language = l_html_div.innerHTML;
-		
-		
-		/* Change the form description/label to the correct language */
-		formLabelHTML = form_label_language;
-		
-		document.getElementById('form_label_display').innerHTML = formLabelHTML;
-		
-		
-		
-		/* Change the button text to the correct language */
-		if (btn_text_language == ''){
-			btn_text_language = default_btn_text;	
-		}
-		document.getElementById('CI_submit').value = btn_text_language;
-		
-		/* Change the checkbox submit confirmation text to the correct language */
-		submitConfirmHTML = '<input onClick="agreesubmit_CI(this)" type="checkbox" name="submit_confirmation" id="submit_confirmation" value="submit_confirmation">&nbsp;'+confirmation_text_language+'';
-		
+    
+    
+    
+    //Submit confirmation code: show only if defined
+    
+    
+    
+    
+    
+    /* Find user language*/
+    var userLang = (navigator.language) ? navigator.language : navigator.userLanguage;
+    userLang = userLang.substr(0,2);
+    userLang = userLang.toUpperCase();
         
-		
-	}/*End checkLanguageSetting() */
-			
-	
-	/* After the text areas are loaded, check browser language and change the submit confirmation text */
-	window.onload=function() {
-		checkLanguageSetting();
-	}
-	
-	
+    /* Set the submit confirmation text to the appropriate language */
+    function checkLanguageSetting(){
+        var confirmation_text_language = "";
+        var default_confirmation_text = "I agree that the above information is correct";
+        var submitConfirmHTML = form_label_language = list_label_language ='';
+        var default_btn_text = "Subscribe!";
+        
+        console.log(userLang);
+        
+    
+    
+    
+    
+        /* Check for designated languages */
+        if(userLang == 'FR'){
+            confirmation_text_language = "";
+            form_label_language = "Vous pouvez vous abonner à notre liste d\'envoi en remplissant le formulaire ci-dessous et cliquez sur \"Abonnez-vous\" bouton.";
+            list_label_language = "S\'il vous plaît sélectionner vos listes d\'intérêt";
+            btn_text_language = "Abonnez-vous";
+        } else if(userLang == 'DU'){
+            confirmation_text_language = "";
+            form_label_language = "Sie können auf unsere Mailingliste, indem Sie das folgende Formular aus und klicken Sie auf die Schaltfläche \"Abonnieren\" abonnieren.";
+            list_label_language = "Bitte wahlen Sie Ihre Listen von Interesse";
+            btn_text_language = "Abonnieren";
+        } else if(userLang == 'ES'){
+            confirmation_text_language = "";
+            form_label_language = "Usted puede suscribirse a nuestra lista de correo rellenando el siguiente formulario y haga clic en el botón \"Suscribirse\".";
+            list_label_language = "Por favor, seleccione las listas de interés";
+            btn_text_language = "Suscribirse";
+        } else if(userLang == 'IT'){
+            confirmation_text_language = "";    
+            form_label_language = "È possibile iscriversi alla nostra mailing list compilando il modulo qui sotto e cliccando sul tasto \"Iscriviti\".";    
+            list_label_language = "Si prega di selezionare le vostre liste di interesse";
+            btn_text_language = "Iscriviti";
+        
+        } else { /* English */
+            confirmation_text_language = "";
+            form_label_language = "";
+            list_label_language = "";
+            btn_text_language = "Submit";
+        }
+    
+    
+        /*Use the browser's inbuilt HTML escape functionality to handle many of the characters*/
+        var l_html_div = document.createElement("div");
+        l_html_div.innerText = l_html_div.textContent = confirmation_text_language;
+        confirmation_text_language = l_html_div.innerHTML;
+        
+        
+        /* Change the form description/label to the correct language */
+        formLabelHTML = form_label_language;
+        
+        document.getElementById('form_label_display').innerHTML = formLabelHTML;
+        
+        
+        /* Change the list description/label to the correct language (if there are add. lists) */
+        document.getElementById("list_label_display").innerHTML = list_label_language;
+        
+        
+        /* Change the button text to the correct language */
+        if (btn_text_language == ''){
+            btn_text_language = default_btn_text;   
+        }
+        document.getElementById('CI_submit').value = btn_text_language;
+        
+        /* Change the checkbox submit confirmation text to the correct language */
+        submitConfirmHTML = '<input onClick="agreesubmit_CI(this)" type="checkbox" name="submit_confirmation" id="submit_confirmation" value="submit_confirmation">&nbsp;'+confirmation_text_language+'';
+        
+        
+        
+    }/*End checkLanguageSetting() */
+            
+    
+    /* After the text areas are loaded, check browser language and change the submit confirmation text */
+    window.onload=function() {
+        checkLanguageSetting();
+    }
+    
+    
     
     //--> 
     </SCRIPT>
 
 
 
-
-<form action="//newsletters.mshanken.com/wc/wc_optin5.cfm" name="CI_subscribeForm" id="CI_subscribeForm" method="post">
+    <form action="http://portal.mshanken.com/wc/wc_verify.cfm" name="CI_subscribeForm" id="CI_subscribeForm" method="post">
 <table width="500" border="0" align="center" cellpadding="3" cellspacing="0" style="border: 1px solid #333333; background-color: #FFFFFF; padding: 8px;">
-		<tr><td><img border="0" src="//portal.criticalimpact.com/user/25208/image/logos/Sign_up_logo_275.png" /></td></tr>
-		<tr>
-			<td>
-			
-				<input type="hidden" name="CI_FID" value="841f705f99be027f">
-			
+        <tr><td><img border="0" src="http://portal.criticalimpact.com/user/25682/image/Logos/Sign_up_logo_275.png" /></td></tr>
+        <tr>
+            <td>
+            
+                <input type="hidden" name="CI_FID" value="2a4836fff1499622">
+                <input type="hidden" name="CI_MID" value="146485141">
+            
 
-				<table width="90%" border="0" align="center" cellpadding="0" cellspacing="0" style="padding: 8px;">
-					<tr>
-						<td align="center" id="form_label_display" style="padding: 3px; font-family:Arial, Helvetica, sans-serif;"></td>
-					</tr>
-					<tr>
-						<td align="center">
-							<table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0" style="padding: 8px;">
+                    <tr>
+                        <td align="center" id="form_label_display" style="padding: 3px; font-family:Arial, Helvetica, sans-serif;"></td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0">
 
-							
+                            
                             
                         
                             <tr>
@@ -374,10 +396,25 @@
                              </td>
                             </tr>
                         
+                        <tr> 
+                          <td colspan="2" id="list_label_display" width="100%" align="left" style="padding: 3px;"></td>
+                        </tr>
+                        
+                            <tr><td colspan="2" width="100%" align="left" style="padding: 3px;"><input type="checkbox" name="CI_LID" id="5833930443" value="5833930443">&nbsp;Shanken News Daily - Cannabis Edition</td></tr>
+                        
+                        <tr>
+                            <td colspan="2" style="padding-top: 20px;">
+                                <div class="g-recaptcha" data-sitekey="6LcNcgsUAAAAAJrF307H_oCEzYub8hkGI5sWVxOB" data-callback="ciEnableSubmitButton" align="center"></div>
+                            </td>
+                        </tr>
                     
+
                         <tr><td colspan="2" style="padding: 3px 3px 6px 3px;">   <p align="center"> <font face="Arial, Helvetica, sans-serif"> 
                         
-                          <input id="CI_submit" name="CI_submit" type="button" value="Submit" onClick="checkForm_CI();" >
+                          <input id="CI_submit" name="CI_submit" type="button" value="Submit" onClick="checkForm_CI();"
+                            
+                            disabled
+                        >
                           </font></p></td><tr>
                     </table>
                 </td>
@@ -416,4 +453,4 @@
 </SCRIPT>
 
 
-	
+    
