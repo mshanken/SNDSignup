@@ -26,7 +26,7 @@ $(function () {
             var tmp = $("#CI_custom2").val(),
                 cachingfields,
                 bustype;
-            
+
             switch (tmp) {
 			  case 'Importer':
 			    bustype = '01';
