@@ -31,7 +31,7 @@ $(function () {
 			  case 'Importer':
 			    bustype = '01';
                 cachingfields = '&em='+$("#CI_email").val()+'&zip='+$("#CI_custom1").val()+'&comp='+$("#CI_custom11").val()+'&bus=14116'+bustype;
-                $(form).attr('action','https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d'+cachingfields);
+                $(form).attr('action','https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d'+encodeURIComponent(cachingfields));
 			    break;
 			  case 'Distiller':
 			    bustype = '02';
