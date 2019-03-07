@@ -431,7 +431,7 @@ $(function() {
         } else {
             $("#CI_subscribeForm").attr(
                 "action",
-                "//portal.mshanken.com/wc/wc_verify.cfm"
+                "//portal.mshanken.com/wc/wc.cfm"
             );
             $(this).val("N");
             // $('#CI_pproactive_agree_to_receive_emails').prop('required',false);
