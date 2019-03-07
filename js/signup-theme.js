@@ -1,4 +1,298 @@
 $(function() {
+    function submitSignup(form, evt) {
+        evt.preventDefault();
+        post_url = $(form).attr("action");
+        post_data = $(form).serialize(); //+ "&CI_submit=Submit";
+        $.post(post_url, post_data)
+            .success(function() {
+                submitDragonforms(form);
+            })
+            .error(function() {
+                console.log("Error submitting signup!");
+            });
+    }
+    function submitDragonforms(form) {
+        var tmp = $("#CI_custom2").val(),
+            cachingfields,
+            bustype;
+
+        switch (tmp) {
+            case "Importer":
+                bustype = "01";
+                cachingfields =
+                    "&em=" +
+                    $("#CI_email").val() +
+                    "&zip=" +
+                    $("#CI_custom1").val() +
+                    "&comp=" +
+                    $("#CI_custom11").val() +
+                    "&bus=14116" +
+                    bustype;
+                $(form).attr(
+                    "action",
+                    "https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d" +
+                        encodeURIComponent(cachingfields)
+                );
+                break;
+            case "Distiller":
+                bustype = "02";
+                cachingfields =
+                    "&em=" +
+                    $("#CI_email").val() +
+                    "&zip=" +
+                    $("#CI_custom1").val() +
+                    "&comp=" +
+                    $("#CI_custom11").val() +
+                    "&bus=14116" +
+                    bustype;
+                $(form).attr(
+                    "action",
+                    "https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d" +
+                        encodeURIComponent(cachingfields)
+                );
+                break;
+            case "Winery":
+                bustype = "03";
+                cachingfields =
+                    "&em=" +
+                    $("#CI_email").val() +
+                    "&zip=" +
+                    $("#CI_custom1").val() +
+                    "&comp=" +
+                    $("#CI_custom11").val() +
+                    "&bus=14116" +
+                    bustype;
+                $(form).attr(
+                    "action",
+                    "https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d" +
+                        encodeURIComponent(cachingfields)
+                );
+                break;
+            case "Wine/Spirits Distributor":
+                bustype = "04";
+                cachingfields =
+                    "&em=" +
+                    $("#CI_email").val() +
+                    "&zip=" +
+                    $("#CI_custom1").val() +
+                    "&comp=" +
+                    $("#CI_custom11").val() +
+                    "&bus=14116" +
+                    bustype;
+                $(form).attr(
+                    "action",
+                    "https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d" +
+                        encodeURIComponent(cachingfields)
+                );
+                break;
+            case "Beer Distributor":
+                bustype = "05";
+                cachingfields =
+                    "&em=" +
+                    $("#CI_email").val() +
+                    "&zip=" +
+                    $("#CI_custom1").val() +
+                    "&comp=" +
+                    $("#CI_custom11").val() +
+                    "&bus=14116" +
+                    bustype;
+                $(form).attr(
+                    "action",
+                    "https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d" +
+                        encodeURIComponent(cachingfields)
+                );
+                break;
+            case "Brewer":
+                bustype = "06";
+                cachingfields =
+                    "&em=" +
+                    $("#CI_email").val() +
+                    "&zip=" +
+                    $("#CI_custom1").val() +
+                    "&comp=" +
+                    $("#CI_custom11").val() +
+                    "&bus=14116" +
+                    bustype;
+                $(form).attr(
+                    "action",
+                    "https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d" +
+                        encodeURIComponent(cachingfields)
+                );
+                break;
+            case "Restaurant":
+                bustype = "07";
+                cachingfields =
+                    "&em=" +
+                    $("#CI_email").val() +
+                    "&zip=" +
+                    $("#CI_custom1").val() +
+                    "&comp=" +
+                    $("#CI_custom11").val() +
+                    "&bus=14116" +
+                    bustype;
+                $(form).attr(
+                    "action",
+                    "https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d" +
+                        encodeURIComponent(cachingfields)
+                );
+                break;
+            case "Bar":
+                bustype = "08";
+                cachingfields =
+                    "&em=" +
+                    $("#CI_email").val() +
+                    "&zip=" +
+                    $("#CI_custom1").val() +
+                    "&comp=" +
+                    $("#CI_custom11").val() +
+                    "&bus=14116" +
+                    bustype;
+                $(form).attr(
+                    "action",
+                    "https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d" +
+                        encodeURIComponent(cachingfields)
+                );
+                break;
+            case "Independent Retailer (Wine/Spirits/Beer)":
+                bustype = "09";
+                cachingfields =
+                    "&em=" +
+                    $("#CI_email").val() +
+                    "&zip=" +
+                    $("#CI_custom1").val() +
+                    "&comp=" +
+                    $("#CI_custom11").val() +
+                    "&bus=14116" +
+                    bustype;
+                $(form).attr(
+                    "action",
+                    "https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d" +
+                        encodeURIComponent(cachingfields)
+                );
+                break;
+            case "Bar":
+                bustype = "10";
+                cachingfields =
+                    "&em=" +
+                    $("#CI_email").val() +
+                    "&zip=" +
+                    $("#CI_custom1").val() +
+                    "&comp=" +
+                    $("#CI_custom11").val() +
+                    "&bus=14116" +
+                    bustype;
+                $(form).attr(
+                    "action",
+                    "https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d" +
+                        encodeURIComponent(cachingfields)
+                );
+                break;
+            case "Chain Retailer (Wine/Spirits/Beer)":
+                bustype = "11";
+                cachingfields =
+                    "&em=" +
+                    $("#CI_email").val() +
+                    "&zip=" +
+                    $("#CI_custom1").val() +
+                    "&comp=" +
+                    $("#CI_custom11").val() +
+                    "&bus=14116" +
+                    bustype;
+                $(form).attr(
+                    "action",
+                    "https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d" +
+                        encodeURIComponent(cachingfields)
+                );
+                break;
+            case "Club (Private, Country)":
+                bustype = "12";
+                cachingfields =
+                    "&em=" +
+                    $("#CI_email").val() +
+                    "&zip=" +
+                    $("#CI_custom1").val() +
+                    "&comp=" +
+                    $("#CI_custom11").val() +
+                    "&bus=14116" +
+                    bustype;
+                $(form).attr(
+                    "action",
+                    "https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d" +
+                        encodeURIComponent(cachingfields)
+                );
+                break;
+            case "Duty Free Operator":
+                bustype = "13";
+                cachingfields =
+                    "&em=" +
+                    $("#CI_email").val() +
+                    "&zip=" +
+                    $("#CI_custom1").val() +
+                    "&comp=" +
+                    $("#CI_custom11").val() +
+                    "&bus=14116" +
+                    bustype;
+                $(form).attr(
+                    "action",
+                    "https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d" +
+                        encodeURIComponent(cachingfields)
+                );
+                break;
+            case "Finance":
+                bustype = "14";
+                cachingfields =
+                    "&em=" +
+                    $("#CI_email").val() +
+                    "&zip=" +
+                    $("#CI_custom1").val() +
+                    "&comp=" +
+                    $("#CI_custom11").val() +
+                    "&bus=14116" +
+                    bustype;
+                $(form).attr(
+                    "action",
+                    "https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d" +
+                        encodeURIComponent(cachingfields)
+                );
+                break;
+            case "Media/PR":
+                bustype = "15";
+                cachingfields =
+                    "&em=" +
+                    $("#CI_email").val() +
+                    "&zip=" +
+                    $("#CI_custom1").val() +
+                    "&comp=" +
+                    $("#CI_custom11").val() +
+                    "&bus=14116" +
+                    bustype;
+                $(form).attr(
+                    "action",
+                    "https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d" +
+                        encodeURIComponent(cachingfields)
+                );
+                break;
+            case "Other":
+                bustype = "21";
+                cachingfields =
+                    "&em=" +
+                    $("#CI_email").val() +
+                    "&zip=" +
+                    $("#CI_custom1").val() +
+                    "&comp=" +
+                    $("#CI_custom11").val() +
+                    "&bus=14116" +
+                    bustype;
+                $(form).attr(
+                    "action",
+                    "https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d" +
+                        encodeURIComponent(cachingfields)
+                );
+                break;
+        }
+        form.submit();
+    }
+
     $("#CI_subscribeForm").validate({
         ignore: ".ignore",
         rules: {
@@ -22,287 +316,7 @@ $(function() {
         validClass: "success",
         errorClass: "error",
         errorElement: "em",
-        submitHandler: function(form) {
-            var tmp = $("#CI_custom2").val(),
-                cachingfields,
-                bustype;
-
-            switch (tmp) {
-                case "Importer":
-                    bustype = "01";
-                    cachingfields =
-                        "&em=" +
-                        $("#CI_email").val() +
-                        "&zip=" +
-                        $("#CI_custom1").val() +
-                        "&comp=" +
-                        $("#CI_custom11").val() +
-                        "&bus=14116" +
-                        bustype;
-                    $(form).attr(
-                        "action",
-                        "https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d" +
-                            encodeURIComponent(cachingfields)
-                    );
-                    break;
-                case "Distiller":
-                    bustype = "02";
-                    cachingfields =
-                        "&em=" +
-                        $("#CI_email").val() +
-                        "&zip=" +
-                        $("#CI_custom1").val() +
-                        "&comp=" +
-                        $("#CI_custom11").val() +
-                        "&bus=14116" +
-                        bustype;
-                    $(form).attr(
-                        "action",
-                        "https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d" +
-                            encodeURIComponent(cachingfields)
-                    );
-                    break;
-                case "Winery":
-                    bustype = "03";
-                    cachingfields =
-                        "&em=" +
-                        $("#CI_email").val() +
-                        "&zip=" +
-                        $("#CI_custom1").val() +
-                        "&comp=" +
-                        $("#CI_custom11").val() +
-                        "&bus=14116" +
-                        bustype;
-                    $(form).attr(
-                        "action",
-                        "https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d" +
-                            encodeURIComponent(cachingfields)
-                    );
-                    break;
-                case "Wine/Spirits Distributor":
-                    bustype = "04";
-                    cachingfields =
-                        "&em=" +
-                        $("#CI_email").val() +
-                        "&zip=" +
-                        $("#CI_custom1").val() +
-                        "&comp=" +
-                        $("#CI_custom11").val() +
-                        "&bus=14116" +
-                        bustype;
-                    $(form).attr(
-                        "action",
-                        "https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d" +
-                            encodeURIComponent(cachingfields)
-                    );
-                    break;
-                case "Beer Distributor":
-                    bustype = "05";
-                    cachingfields =
-                        "&em=" +
-                        $("#CI_email").val() +
-                        "&zip=" +
-                        $("#CI_custom1").val() +
-                        "&comp=" +
-                        $("#CI_custom11").val() +
-                        "&bus=14116" +
-                        bustype;
-                    $(form).attr(
-                        "action",
-                        "https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d" +
-                            encodeURIComponent(cachingfields)
-                    );
-                    break;
-                case "Brewer":
-                    bustype = "06";
-                    cachingfields =
-                        "&em=" +
-                        $("#CI_email").val() +
-                        "&zip=" +
-                        $("#CI_custom1").val() +
-                        "&comp=" +
-                        $("#CI_custom11").val() +
-                        "&bus=14116" +
-                        bustype;
-                    $(form).attr(
-                        "action",
-                        "https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d" +
-                            encodeURIComponent(cachingfields)
-                    );
-                    break;
-                case "Restaurant":
-                    bustype = "07";
-                    cachingfields =
-                        "&em=" +
-                        $("#CI_email").val() +
-                        "&zip=" +
-                        $("#CI_custom1").val() +
-                        "&comp=" +
-                        $("#CI_custom11").val() +
-                        "&bus=14116" +
-                        bustype;
-                    $(form).attr(
-                        "action",
-                        "https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d" +
-                            encodeURIComponent(cachingfields)
-                    );
-                    break;
-                case "Bar":
-                    bustype = "08";
-                    cachingfields =
-                        "&em=" +
-                        $("#CI_email").val() +
-                        "&zip=" +
-                        $("#CI_custom1").val() +
-                        "&comp=" +
-                        $("#CI_custom11").val() +
-                        "&bus=14116" +
-                        bustype;
-                    $(form).attr(
-                        "action",
-                        "https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d" +
-                            encodeURIComponent(cachingfields)
-                    );
-                    break;
-                case "Independent Retailer (Wine/Spirits/Beer)":
-                    bustype = "09";
-                    cachingfields =
-                        "&em=" +
-                        $("#CI_email").val() +
-                        "&zip=" +
-                        $("#CI_custom1").val() +
-                        "&comp=" +
-                        $("#CI_custom11").val() +
-                        "&bus=14116" +
-                        bustype;
-                    $(form).attr(
-                        "action",
-                        "https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d" +
-                            encodeURIComponent(cachingfields)
-                    );
-                    break;
-                case "Bar":
-                    bustype = "10";
-                    cachingfields =
-                        "&em=" +
-                        $("#CI_email").val() +
-                        "&zip=" +
-                        $("#CI_custom1").val() +
-                        "&comp=" +
-                        $("#CI_custom11").val() +
-                        "&bus=14116" +
-                        bustype;
-                    $(form).attr(
-                        "action",
-                        "https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d" +
-                            encodeURIComponent(cachingfields)
-                    );
-                    break;
-                case "Chain Retailer (Wine/Spirits/Beer)":
-                    bustype = "11";
-                    cachingfields =
-                        "&em=" +
-                        $("#CI_email").val() +
-                        "&zip=" +
-                        $("#CI_custom1").val() +
-                        "&comp=" +
-                        $("#CI_custom11").val() +
-                        "&bus=14116" +
-                        bustype;
-                    $(form).attr(
-                        "action",
-                        "https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d" +
-                            encodeURIComponent(cachingfields)
-                    );
-                    break;
-                case "Club (Private, Country)":
-                    bustype = "12";
-                    cachingfields =
-                        "&em=" +
-                        $("#CI_email").val() +
-                        "&zip=" +
-                        $("#CI_custom1").val() +
-                        "&comp=" +
-                        $("#CI_custom11").val() +
-                        "&bus=14116" +
-                        bustype;
-                    $(form).attr(
-                        "action",
-                        "https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d" +
-                            encodeURIComponent(cachingfields)
-                    );
-                    break;
-                case "Duty Free Operator":
-                    bustype = "13";
-                    cachingfields =
-                        "&em=" +
-                        $("#CI_email").val() +
-                        "&zip=" +
-                        $("#CI_custom1").val() +
-                        "&comp=" +
-                        $("#CI_custom11").val() +
-                        "&bus=14116" +
-                        bustype;
-                    $(form).attr(
-                        "action",
-                        "https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d" +
-                            encodeURIComponent(cachingfields)
-                    );
-                    break;
-                case "Finance":
-                    bustype = "14";
-                    cachingfields =
-                        "&em=" +
-                        $("#CI_email").val() +
-                        "&zip=" +
-                        $("#CI_custom1").val() +
-                        "&comp=" +
-                        $("#CI_custom11").val() +
-                        "&bus=14116" +
-                        bustype;
-                    $(form).attr(
-                        "action",
-                        "https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d" +
-                            encodeURIComponent(cachingfields)
-                    );
-                    break;
-                case "Media/PR":
-                    bustype = "15";
-                    cachingfields =
-                        "&em=" +
-                        $("#CI_email").val() +
-                        "&zip=" +
-                        $("#CI_custom1").val() +
-                        "&comp=" +
-                        $("#CI_custom11").val() +
-                        "&bus=14116" +
-                        bustype;
-                    $(form).attr(
-                        "action",
-                        "https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d" +
-                            encodeURIComponent(cachingfields)
-                    );
-                    break;
-                case "Other":
-                    bustype = "21";
-                    cachingfields =
-                        "&em=" +
-                        $("#CI_email").val() +
-                        "&zip=" +
-                        $("#CI_custom1").val() +
-                        "&comp=" +
-                        $("#CI_custom11").val() +
-                        "&bus=14116" +
-                        bustype;
-                    $(form).attr(
-                        "action",
-                        "https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d" +
-                            encodeURIComponent(cachingfields)
-                    );
-                    break;
-            }
-            form.submit();
-        },
+        submitHandler: submitSignup,
         success: function(label, element) {
             // console.log( "test2: ", label, element );
             var _this = $(element).hasClass("form-check-input")
