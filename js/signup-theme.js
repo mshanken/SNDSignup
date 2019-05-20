@@ -109,8 +109,8 @@ $(function () {
                 $(form).attr('action','https://portal.mshanken.com/wc/wc_verify.cfm?omedasite=QXnew30d1d'+encodeURIComponent(cachingfields));
 			    break;
 			}
-			console.log(cachingfields);
-            // form.submit();
+			// console.log(cachingfields);
+            form.submit();
         },
 		success: function(label, element){
 			// console.log( "test2: ", label, element );
