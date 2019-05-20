@@ -30,86 +30,87 @@ $(function () {
             switch (tmp) {
 			  case 'Importer':
 			    bustype = '01';
-                cachingfields = '&em='+$("#CI_email").val()+'&zip='+$("#CI_custom1").val()+'&comp='+$("#CI_custom11").val()+'&bus=14116'+bustype;
-                $(form).attr('action','https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d'+encodeURIComponent(cachingfields));
+                cachingfields = '&em='+$("#CI_email").val()+'&zip='+$("#CI_custom1").val()+'&comp='+$("#CI_custom11").val()+'&country='+$("#CI_custom28").val()+'&title='+$("#CI_custom4").val()+'&bus=14116'+bustype;
+                $(form).attr('action','https://portal.mshanken.com/wc/wc_verify.cfm?omedasite=QXnew30d1d'+encodeURIComponent(cachingfields));
 			    break;
 			  case 'Distiller':
 			    bustype = '02';
-                cachingfields = '&em='+$("#CI_email").val()+'&zip='+$("#CI_custom1").val()+'&comp='+$("#CI_custom11").val()+'&bus=14116'+bustype;
-                $(form).attr('action','https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d'+encodeURIComponent(cachingfields));
+                cachingfields = '&em='+$("#CI_email").val()+'&zip='+$("#CI_custom1").val()+'&comp='+$("#CI_custom11").val()+'&country='+$("#CI_custom28").val()+'&title='+$("#CI_custom4").val()+'&bus=14116'+bustype;
+                $(form).attr('action','https://portal.mshanken.com/wc/wc_verify.cfm?omedasite=QXnew30d1d'+encodeURIComponent(cachingfields));
 			    break;
 			  case 'Winery':
 			    bustype = '03';
-                cachingfields = '&em='+$("#CI_email").val()+'&zip='+$("#CI_custom1").val()+'&comp='+$("#CI_custom11").val()+'&bus=14116'+bustype;
-                $(form).attr('action','https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d'+encodeURIComponent(cachingfields));
+                cachingfields = '&em='+$("#CI_email").val()+'&zip='+$("#CI_custom1").val()+'&comp='+$("#CI_custom11").val()+'&country='+$("#CI_custom28").val()+'&title='+$("#CI_custom4").val()+'&bus=14116'+bustype;
+                $(form).attr('action','https://portal.mshanken.com/wc/wc_verify.cfm?omedasite=QXnew30d1d'+encodeURIComponent(cachingfields));
 			    break;
 			  case 'Wine/Spirits Distributor':
 			    bustype = '04';
-                cachingfields = '&em='+$("#CI_email").val()+'&zip='+$("#CI_custom1").val()+'&comp='+$("#CI_custom11").val()+'&bus=14116'+bustype;
-                $(form).attr('action','https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d'+encodeURIComponent(cachingfields));
+                cachingfields = '&em='+$("#CI_email").val()+'&zip='+$("#CI_custom1").val()+'&comp='+$("#CI_custom11").val()+'&country='+$("#CI_custom28").val()+'&title='+$("#CI_custom4").val()+'&bus=14116'+bustype;
+                $(form).attr('action','https://portal.mshanken.com/wc/wc_verify.cfm?omedasite=QXnew30d1d'+encodeURIComponent(cachingfields));
 			    break;
 			  case 'Beer Distributor':
 			    bustype = '05';
-                cachingfields = '&em='+$("#CI_email").val()+'&zip='+$("#CI_custom1").val()+'&comp='+$("#CI_custom11").val()+'&bus=14116'+bustype;
-                $(form).attr('action','https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d'+encodeURIComponent(cachingfields));
+                cachingfields = '&em='+$("#CI_email").val()+'&zip='+$("#CI_custom1").val()+'&comp='+$("#CI_custom11").val()+'&country='+$("#CI_custom28").val()+'&title='+$("#CI_custom4").val()+'&bus=14116'+bustype;
+                $(form).attr('action','https://portal.mshanken.com/wc/wc_verify.cfm?omedasite=QXnew30d1d'+encodeURIComponent(cachingfields));
 			    break;
 			  case 'Brewer':
 			    bustype = '06';
-                cachingfields = '&em='+$("#CI_email").val()+'&zip='+$("#CI_custom1").val()+'&comp='+$("#CI_custom11").val()+'&bus=14116'+bustype;
-                $(form).attr('action','https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d'+encodeURIComponent(cachingfields));
+                cachingfields = '&em='+$("#CI_email").val()+'&zip='+$("#CI_custom1").val()+'&comp='+$("#CI_custom11").val()+'&country='+$("#CI_custom28").val()+'&title='+$("#CI_custom4").val()+'&bus=14116'+bustype;
+                $(form).attr('action','https://portal.mshanken.com/wc/wc_verify.cfm?omedasite=QXnew30d1d'+encodeURIComponent(cachingfields));
 			    break;
 			  case 'Restaurant':
 			    bustype = '07';
-                cachingfields = '&em='+$("#CI_email").val()+'&zip='+$("#CI_custom1").val()+'&comp='+$("#CI_custom11").val()+'&bus=14116'+bustype;
-                $(form).attr('action','https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d'+encodeURIComponent(cachingfields));
+                cachingfields = '&em='+$("#CI_email").val()+'&zip='+$("#CI_custom1").val()+'&comp='+$("#CI_custom11").val()+'&country='+$("#CI_custom28").val()+'&title='+$("#CI_custom4").val()+'&bus=14116'+bustype;
+                $(form).attr('action','https://portal.mshanken.com/wc/wc_verify.cfm?omedasite=QXnew30d1d'+encodeURIComponent(cachingfields));
 			    break;
 			  case 'Bar':
 			    bustype = '08';
-                cachingfields = '&em='+$("#CI_email").val()+'&zip='+$("#CI_custom1").val()+'&comp='+$("#CI_custom11").val()+'&bus=14116'+bustype;
-                $(form).attr('action','https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d'+encodeURIComponent(cachingfields));
+                cachingfields = '&em='+$("#CI_email").val()+'&zip='+$("#CI_custom1").val()+'&comp='+$("#CI_custom11").val()+'&country='+$("#CI_custom28").val()+'&title='+$("#CI_custom4").val()+'&bus=14116'+bustype;
+                $(form).attr('action','https://portal.mshanken.com/wc/wc_verify.cfm?omedasite=QXnew30d1d'+encodeURIComponent(cachingfields));
 			    break;
 			  case 'Independent Retailer (Wine/Spirits/Beer)':
 			    bustype = '09';
-                cachingfields = '&em='+$("#CI_email").val()+'&zip='+$("#CI_custom1").val()+'&comp='+$("#CI_custom11").val()+'&bus=14116'+bustype;
-                $(form).attr('action','https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d'+encodeURIComponent(cachingfields));
+                cachingfields = '&em='+$("#CI_email").val()+'&zip='+$("#CI_custom1").val()+'&comp='+$("#CI_custom11").val()+'&country='+$("#CI_custom28").val()+'&title='+$("#CI_custom4").val()+'&bus=14116'+bustype;
+                $(form).attr('action','https://portal.mshanken.com/wc/wc_verify.cfm?omedasite=QXnew30d1d'+encodeURIComponent(cachingfields));
 			    break;
 			  case 'Bar':
 			    bustype = '10';
-                cachingfields = '&em='+$("#CI_email").val()+'&zip='+$("#CI_custom1").val()+'&comp='+$("#CI_custom11").val()+'&bus=14116'+bustype;
-                $(form).attr('action','https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d'+encodeURIComponent(cachingfields));
+                cachingfields = '&em='+$("#CI_email").val()+'&zip='+$("#CI_custom1").val()+'&comp='+$("#CI_custom11").val()+'&country='+$("#CI_custom28").val()+'&title='+$("#CI_custom4").val()+'&bus=14116'+bustype;
+                $(form).attr('action','https://portal.mshanken.com/wc/wc_verify.cfm?omedasite=QXnew30d1d'+encodeURIComponent(cachingfields));
 			    break;
 			  case 'Chain Retailer (Wine/Spirits/Beer)':
 			    bustype = '11';
-                cachingfields = '&em='+$("#CI_email").val()+'&zip='+$("#CI_custom1").val()+'&comp='+$("#CI_custom11").val()+'&bus=14116'+bustype;
-                $(form).attr('action','https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d'+encodeURIComponent(cachingfields));
+                cachingfields = '&em='+$("#CI_email").val()+'&zip='+$("#CI_custom1").val()+'&comp='+$("#CI_custom11").val()+'&country='+$("#CI_custom28").val()+'&title='+$("#CI_custom4").val()+'&bus=14116'+bustype;
+                $(form).attr('action','https://portal.mshanken.com/wc/wc_verify.cfm?omedasite=QXnew30d1d'+encodeURIComponent(cachingfields));
 			    break;
 			  case 'Club (Private, Country)':
 			    bustype = '12';
                 cachingfields = '&em='+$("#CI_email").val()+'&zip='+$("#CI_custom1").val()+'&comp='+$("#CI_custom11").val()+'&bus=14116'+bustype;
-                $(form).attr('action','https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d'+encodeURIComponent(cachingfields));
+                $(form).attr('action','https://portal.mshanken.com/wc/wc_verify.cfm?omedasite=QXnew30d1d'+encodeURIComponent(cachingfields));
 			    break;
 			  case 'Duty Free Operator':
 			    bustype = '13';
                 cachingfields = '&em='+$("#CI_email").val()+'&zip='+$("#CI_custom1").val()+'&comp='+$("#CI_custom11").val()+'&bus=14116'+bustype;
-                $(form).attr('action','https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d'+encodeURIComponent(cachingfields));
+                $(form).attr('action','https://portal.mshanken.com/wc/wc_verify.cfm?omedasite=QXnew30d1d'+encodeURIComponent(cachingfields));
 			    break;
 			  case 'Finance':
 			    bustype = '14';
                 cachingfields = '&em='+$("#CI_email").val()+'&zip='+$("#CI_custom1").val()+'&comp='+$("#CI_custom11").val()+'&bus=14116'+bustype;
-                $(form).attr('action','https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d'+encodeURIComponent(cachingfields));
+                $(form).attr('action','https://portal.mshanken.com/wc/wc_verify.cfm?omedasite=QXnew30d1d'+encodeURIComponent(cachingfields));
 			    break;
 			  case 'Media/PR':
 			    bustype = '15';
                 cachingfields = '&em='+$("#CI_email").val()+'&zip='+$("#CI_custom1").val()+'&comp='+$("#CI_custom11").val()+'&bus=14116'+bustype;
-                $(form).attr('action','https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d'+encodeURIComponent(cachingfields));
+                $(form).attr('action','https://portal.mshanken.com/wc/wc_verify.cfm?omedasite=QXnew30d1d'+encodeURIComponent(cachingfields));
 			    break;
 			  case 'Other':
 			    bustype = '21';
                 cachingfields = '&em='+$("#CI_email").val()+'&zip='+$("#CI_custom1").val()+'&comp='+$("#CI_custom11").val()+'&bus=14116'+bustype;
-                $(form).attr('action','https://msh.dragonforms.com/init.do?omedasite=QXnew30d1d'+encodeURIComponent(cachingfields));
+                $(form).attr('action','https://portal.mshanken.com/wc/wc_verify.cfm?omedasite=QXnew30d1d'+encodeURIComponent(cachingfields));
 			    break;
 			}
-            form.submit();
+			console.log(cachingfields);
+            // form.submit();
         },
 		success: function(label, element){
 			// console.log( "test2: ", label, element );
