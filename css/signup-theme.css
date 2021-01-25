@@ -37,6 +37,13 @@ hr{ margin-top: 1px; }
 .checkbox-item.glyphicon-check {
     color: #3b99fc;
 }
+.radiobox-item {
+    font-size: 21px;
+    color: #999;
+}
+.radiobox-item.glyphicon-check {
+    color: #3b99fc;
+}
 #GDPRContent.form-check {
   margin-top: 20px;
   margin-left: 30px;
