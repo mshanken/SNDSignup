@@ -62,8 +62,8 @@ $(function() {
                     bustype = '213';
                     cachingfields = '&em=' + $("#CI_email").val() + '&zip=' + $("#CI_custom1").val() + '&comp=' + $("#CI_custom11").val() + '&ctry=' + $("#CI_custom28").val() + '&title=' + $("#CI_custom4").val() + '&bus=' + bustype;
                     $(form).attr('action', 'https://portal.mshanken.com/wc/wc_verify.cfm?omedasite=QXnew30d1d' + encodeURIComponent(cachingfields));
-                    $('#CI_thankyou').val('https://msh.dragonforms.com/MSH12_comp&PK=SNDfree21');
-                    $('#CI_thankyou2').val('https://msh.dragonforms.com/MSH12_comp&PK=SNDfree21');
+                    $('#CI_thankyou').val('https://msh.dragonforms.com/MSH12_comp&PK=SNDfree21&em=%%CI_email%%&zip=%%CI_custom1%%&comp=%%CI_custom11%%&bus=%%CI_custom2%%&country=%%CI_custom28%%&title=%%CI_custom4%%');
+                    $('#CI_thankyou2').val('https://msh.dragonforms.com/MSH12_comp&PK=SNDfree21&em=%%CI_email%%&zip=%%CI_custom1%%&comp=%%CI_custom11%%&bus=%%CI_custom2%%&country=%%CI_custom28%%&title=%%CI_custom4%%');
                     break;
                 case 'Bar':
                     bustype = '214';
@@ -79,15 +79,15 @@ $(function() {
                     bustype = '216';
                     cachingfields = '&em=' + $("#CI_email").val() + '&zip=' + $("#CI_custom1").val() + '&comp=' + $("#CI_custom11").val() + '&ctry=' + $("#CI_custom28").val() + '&title=' + $("#CI_custom4").val() + '&bus=' + bustype;
                     $(form).attr('action', 'https://portal.mshanken.com/wc/wc_verify.cfm?omedasite=QXnew30d1d' + encodeURIComponent(cachingfields));
-                    $('#CI_thankyou').val('https://msh.dragonforms.com/MSH12_comp&PK=SNDfree21');
-                    $('#CI_thankyou2').val('https://msh.dragonforms.com/MSH12_comp&PK=SNDfree21');
+                    $('#CI_thankyou').val('https://msh.dragonforms.com/MSH12_comp&PK=SNDfree21&em=%%CI_email%%&zip=%%CI_custom1%%&comp=%%CI_custom11%%&bus=%%CI_custom2%%&country=%%CI_custom28%%&title=%%CI_custom4%%');
+                    $('#CI_thankyou2').val('https://msh.dragonforms.com/MSH12_comp&PK=SNDfree21&em=%%CI_email%%&zip=%%CI_custom1%%&comp=%%CI_custom11%%&bus=%%CI_custom2%%&country=%%CI_custom28%%&title=%%CI_custom4%%');
                     break;
                 case 'Chain Retailer (Wine/Spirits/Beer)':
                     bustype = '217';
                     cachingfields = '&em=' + $("#CI_email").val() + '&zip=' + $("#CI_custom1").val() + '&comp=' + $("#CI_custom11").val() + '&ctry=' + $("#CI_custom28").val() + '&title=' + $("#CI_custom4").val() + '&bus=' + bustype;
                     $(form).attr('action', 'https://portal.mshanken.com/wc/wc_verify.cfm?omedasite=QXnew30d1d' + encodeURIComponent(cachingfields));
-                    $('#CI_thankyou').val('https://msh.dragonforms.com/MSH12_comp&PK=SNDfree21');
-                    $('#CI_thankyou2').val('https://msh.dragonforms.com/MSH12_comp&PK=SNDfree21');
+                    $('#CI_thankyou').val('https://msh.dragonforms.com/MSH12_comp&PK=SNDfree21&em=%%CI_email%%&zip=%%CI_custom1%%&comp=%%CI_custom11%%&bus=%%CI_custom2%%&country=%%CI_custom28%%&title=%%CI_custom4%%');
+                    $('#CI_thankyou2').val('https://msh.dragonforms.com/MSH12_comp&PK=SNDfree21&em=%%CI_email%%&zip=%%CI_custom1%%&comp=%%CI_custom11%%&bus=%%CI_custom2%%&country=%%CI_custom28%%&title=%%CI_custom4%%');
                     break;
                 case 'Club (Private, Country)':
                     bustype = '218';
