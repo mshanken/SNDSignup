@@ -69,11 +69,15 @@ $(function() {
                     bustype = '214';
                     cachingfields = '&em=' + $("#CI_email").val() + '&zip=' + $("#CI_custom1").val() + '&comp=' + $("#CI_custom11").val() + '&ctry=' + $("#CI_custom28").val() + '&title=' + $("#CI_custom4").val() + '&bus=' + bustype;
                     $(form).attr('action', 'https://portal.mshanken.com/wc/wc_verify.cfm?omedasite=QXnew30d1d' + encodeURIComponent(cachingfields));
+                    $('#CI_thankyou').val('https://msh.dragonforms.com/MSH12_comp&PK=SNDfree21&em=%%CI_email%%&zip=%%CI_custom1%%&comp=%%CI_custom11%%');
+                    $('#CI_thankyou2').val('https://msh.dragonforms.com/MSH12_comp&PK=SNDfree21&em=%%CI_email%%&zip=%%CI_custom1%%&comp=%%CI_custom11%%');
                     break;
                 case 'Hotel':
                     bustype = '215';
                     cachingfields = '&em=' + $("#CI_email").val() + '&zip=' + $("#CI_custom1").val() + '&comp=' + $("#CI_custom11").val() + '&ctry=' + $("#CI_custom28").val() + '&title=' + $("#CI_custom4").val() + '&bus=' + bustype;
                     $(form).attr('action', 'https://portal.mshanken.com/wc/wc_verify.cfm?omedasite=QXnew30d1d' + encodeURIComponent(cachingfields));
+                    $('#CI_thankyou').val('https://msh.dragonforms.com/MSH12_comp&PK=SNDfree21&em=%%CI_email%%&zip=%%CI_custom1%%&comp=%%CI_custom11%%');
+                    $('#CI_thankyou2').val('https://msh.dragonforms.com/MSH12_comp&PK=SNDfree21&em=%%CI_email%%&zip=%%CI_custom1%%&comp=%%CI_custom11%%');
                     break;
                 case 'Independent Retailer (Wine/Spirits/Beer)':
                     bustype = '216';
@@ -93,6 +97,8 @@ $(function() {
                     bustype = '218';
                     cachingfields = '&em=' + $("#CI_email").val() + '&zip=' + $("#CI_custom1").val() + '&comp=' + $("#CI_custom11").val() + '&ctry=' + $("#CI_custom28").val() + '&title=' + $("#CI_custom4").val() + '&bus=' + bustype;
                     $(form).attr('action', 'https://portal.mshanken.com/wc/wc_verify.cfm?omedasite=QXnew30d1d' + encodeURIComponent(cachingfields));
+                    $('#CI_thankyou').val('https://msh.dragonforms.com/MSH12_comp&PK=SNDfree21&em=%%CI_email%%&zip=%%CI_custom1%%&comp=%%CI_custom11%%');
+                    $('#CI_thankyou2').val('https://msh.dragonforms.com/MSH12_comp&PK=SNDfree21&em=%%CI_email%%&zip=%%CI_custom1%%&comp=%%CI_custom11%%');
                     break;
                 case 'Duty Free Operator':
                     bustype = '219';
