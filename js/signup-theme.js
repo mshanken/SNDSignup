@@ -177,12 +177,34 @@ $(function() {
         }
     });
 
-    $("#CI_custom4").change(function() {
-        // console.log($(this));
-        if ($(this).val() === "Other") {
-            $('#CI_custom26').parent().removeClass("hide");
+    /** Country field adds 2 required fields (City and State/Province)
+     * if USA or Canada is selected */
+    var countryField = $('#CI_custom28'),
+        cityStateProvinceFields = $('#CI_custom31, #CI_custom8')
+
+    if (countryField.val() === "United States" || countryField.val() === "Canada") {
+        cityStateProvinceFields.parent().removeClass('hide');
+        cityStateProvinceFields.addClass('required');
+    } else {
+        cityStateProvinceFields.parent().addClass('hide');
+        cityStateProvinceFields.removeClass('required');
+    }
+    countryField.change(function(e) {
+        // console.log(this, $(this).val(), $("#CI_custom28").val(), e);
+        if ($(this).val() === "United States" || $(this).val() === "Canada") {
+            cityStateProvinceFields.parent().removeClass('hide');
+            cityStateProvinceFields.addClass('required');
         } else {
-            $('#CI_custom26').parent().addClass("hide");
+            cityStateProvinceFields.parent().addClass('hide');
+            cityStateProvinceFields.removeClass('required');
+        }
+    });
+
+    $("input[type=checkbox]").change(function() {
+        if ($(this).prop('checked')) {
+            $(this).prev().removeClass('glyphicon-unchecked').addClass('glyphicon-check');
+        } else {
+            $(this).prev().removeClass('glyphicon-check').addClass('glyphicon-unchecked');
         }
     });
 
